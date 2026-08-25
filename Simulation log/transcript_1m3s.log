@@ -1,0 +1,219 @@
+# ** UI-Msg: (vish-4014) No objects found matching '/axi_top_1m3s_tb/dut/gen_slaves[2]/u_slave/r_beat_cnt'.
+# Executing ONERROR command at macro ./wave3m.do line 46
+# ** UI-Msg: (vish-4014) No objects found matching '/axi_top_1m3s_tb/dut/gen_slaves[2]/u_slave/r_beat_cnt_en'.
+# Executing ONERROR command at macro ./wave3m.do line 47
+# ** UI-Msg: (vish-4014) No objects found matching '/axi_top_1m3s_tb/dut/gen_slaves[1]/u_slave/r_beat_cnt'.
+# Executing ONERROR command at macro ./wave3m.do line 92
+# ** UI-Msg: (vish-4014) No objects found matching '/axi_top_1m3s_tb/dut/gen_slaves[1]/u_slave/r_beat_cnt_en'.
+# Executing ONERROR command at macro ./wave3m.do line 93
+# ** UI-Msg: (vish-4014) No objects found matching '/axi_top_1m3s_tb/dut/gen_slaves[0]/u_slave/r_beat_cnt'.
+# Executing ONERROR command at macro ./wave3m.do line 138
+# ** UI-Msg: (vish-4014) No objects found matching '/axi_top_1m3s_tb/dut/gen_slaves[0]/u_slave/r_beat_cnt_en'.
+# Executing ONERROR command at macro ./wave3m.do line 139
+run -all
+# 
+# === TEST 1: 0x0000 (slave 0) ===
+# addr=00000000 len=3 burst=1 size=10 id=1
+# [195000] Write transaction complete, resp = OKAY
+# [335000] beat 0 OK - data = a0a00000
+# [355000] beat 1 OK - data = a0a00001
+# [375000] beat 2 OK - data = a0a00002
+# [395000] beat 3 OK - data = a0a00003
+# --- TEST 1 PASSED ---
+# 
+# === TEST 2: 0x1000 (slave 1) ===
+# addr=00001000 len=3 burst=1 size=10 id=2
+# [535000] Write transaction complete, resp = OKAY
+# [675000] beat 0 OK - data = b0b00000
+# [695000] beat 1 OK - data = b0b00001
+# [715000] beat 2 OK - data = b0b00002
+# [735000] beat 3 OK - data = b0b00003
+# --- TEST 2 PASSED ---
+# 
+# === TEST 3: 0x2000 (slave 2) ===
+# addr=00002000 len=3 burst=1 size=10 id=3
+# [875000] Write transaction complete, resp = OKAY
+# [1015000] beat 0 OK - data = c0c00000
+# [1035000] beat 1 OK - data = c0c00001
+# [1055000] beat 2 OK - data = c0c00002
+# [1075000] beat 3 OK - data = c0c00003
+# --- TEST 3 PASSED ---
+# 
+# === TEST 4:  0 (addr 0x0FE0) ===
+# addr=00000fe0 len=3 burst=1 size=10 id=4
+# [1215000] Write transaction complete, resp = OKAY
+# [1355000] beat 0 OK - data = d0d00000
+# [1375000] beat 1 OK - data = d0d00001
+# [1395000] beat 2 OK - data = d0d00002
+# [1415000] beat 3 OK - data = d0d00003
+# --- TEST 4 PASSED ---
+# 
+# === TEST 5:  1 (addr 0x1000) ===
+# addr=00001000 len=3 burst=1 size=10 id=5
+# [1555000] Write transaction complete, resp = OKAY
+# [1695000] beat 0 OK - data = e0e00000
+# [1715000] beat 1 OK - data = e0e00001
+# [1735000] beat 2 OK - data = e0e00002
+# [1755000] beat 3 OK - data = e0e00003
+# --- TEST 5 PASSED ---
+# 
+# === TEST 6: 0x1200 (slave 1) ===
+# addr=00001200 len=3 burst=10 size=10 id=6
+# [1895000] Write transaction complete, resp = OKAY
+# [2035000] beat 0 OK - data = f0f00000
+# [2055000] beat 1 OK - data = f0f00001
+# [2075000] beat 2 OK - data = f0f00002
+# [2095000] beat 3 OK - data = f0f00003
+# --- TEST 6 PASSED ---
+# 
+# === TEST 7:  0 (addr 0x0100) ===
+# addr=00000100 len=3 burst=1 size=10 id=7
+# [2235000] Write transaction complete, resp = OKAY
+# [2375000] beat 0 OK - data = 11110000
+# [2395000] beat 1 OK - data = 11110001
+# [2415000] beat 2 OK - data = 11110002
+# [2435000] beat 3 OK - data = 11110003
+# --- TEST 7 PASSED ---
+# 
+# === TEST 8:  2 (addr 0x2100) ===
+# addr=00002100 len=3 burst=1 size=10 id=8
+# [2575000] Write transaction complete, resp = OKAY
+# [2715000] beat 0 OK - data = 22220000
+# [2735000] beat 1 OK - data = 22220001
+# [2755000] beat 2 OK - data = 22220002
+# [2775000] beat 3 OK - data = 22220003
+# --- TEST 8 PASSED ---
+# 
+# === TEST 9:  1 (addr 0x1100) ===
+# addr=00001100 len=3 burst=1 size=10 id=9
+# [2915000] Write transaction complete, resp = OKAY
+# [3055000] beat 0 OK - data = 33330000
+# [3075000] beat 1 OK - data = 33330001
+# [3095000] beat 2 OK - data = 33330002
+# [3115000] beat 3 OK - data = 33330003
+# --- TEST 9 PASSED ---
+# 
+# === TEST 10: interleave step D - read back slave 1, then slave 0, then slave 2 ===
+# [3255000] beat 0 OK - data = 33330000
+# [3275000] beat 1 OK - data = 33330001
+# [3295000] beat 2 OK - data = 33330002
+# [3315000] beat 3 OK - data = 33330003
+# [3455000] beat 0 OK - data = 11110000
+# [3475000] beat 1 OK - data = 11110001
+# [3495000] beat 2 OK - data = 11110002
+# [3515000] beat 3 OK - data = 11110003
+# [3655000] beat 0 OK - data = 22220000
+# [3675000] beat 1 OK - data = 22220001
+# [3695000] beat 2 OK - data = 22220002
+# [3715000] beat 3 OK - data = 22220003
+# --- TEST 10 PASSED ---
+# 
+# === TEST 11:  0 (addr 0x0300) ===
+# addr=00000300 len=0 burst=1 size=10 id=10
+# [3795000] Write transaction complete, resp = OKAY
+# [3905000] beat 0 OK - data = 44440000
+# --- TEST 11 PASSED ---
+# 
+# === TEST 12:  1 (addr 0x1300) ===
+# addr=00001300 len=0 burst=1 size=10 id=11
+# [3985000] Write transaction complete, resp = OKAY
+# [4095000] beat 0 OK - data = 55550000
+# --- TEST 12 PASSED ---
+# 
+# === TEST 13:  2 (addr 0x2300) ===
+# addr=00002300 len=0 burst=1 size=10 id=12
+# [4175000] Write transaction complete, resp = OKAY
+# [4285000] beat 0 OK - data = 66660000
+# --- TEST 13 PASSED ---
+# 
+# === TEST 14: 0x2400 (slave 2) ===
+# addr=00002400 len=3 burst=1 size=0 id=13
+# [4425000] Write transaction complete, resp = OKAY
+# [4565000] beat 0 OK - data = 99990000
+# [4585000] beat 1 OK - data = 99990000
+# [4605000] beat 2 OK - data = 99990000
+# [4625000] beat 3 OK - data = 99990000
+# --- TEST 14 PASSED ---
+# 
+# === TEST 15:  concurrent read ===
+# addr=00000500 len=3 burst=1 size=10 id=14
+# [4765000] Write transaction complete, resp = OKAY
+# [4905000] beat 0 OK - data = 77770000
+# [4925000] beat 1 OK - data = 77770001
+# [4945000] beat 2 OK - data = 77770002
+# [4965000] beat 3 OK - data = 77770003
+# --- TEST 15 PASSED ---
+# 
+# === TEST 16 (CONCURRENT): 0x0500 (slave 0) ===
+#   WRITE: addr=00002500 len=3 id=15
+#   READ : addr=00000500 len=3 id=14
+# [5105000] Write transaction complete, resp = OKAY
+# [5105000] beat 0 OK - data = 77770000
+# [5125000] beat 1 OK - data = 77770001
+# [5145000] beat 2 OK - data = 77770002
+# [5165000] beat 3 OK - data = 77770003
+# --- TEST 16 PASSED (concurrent) ---
+# 
+# === TEST 17 (CONCURRENT): 0x2500 (slave 2) ===
+#   WRITE: addr=00001500 len=7 id=0
+#   READ : addr=00002500 len=3 id=15
+# [5305000] beat 0 OK - data = 8a8a0000
+# [5325000] beat 1 OK - data = 8a8a0001
+# [5345000] beat 2 OK - data = 8a8a0002
+# [5365000] beat 3 OK - data = 8a8a0003
+# [5385000] Write transaction complete, resp = OKAY
+# --- TEST 17 PASSED (concurrent) ---
+# 
+# =====================================
+# === ALL 17 TESTS PASSED ===
+# =====================================
+# ** Note: $stop    : C:/Users/LENOVO/Desktop/Digital_Electronics/AXI_Protocol/testbench/axi_top_1m3s_tb.sv(469)
+#    Time: 5485 ns  Iteration: 1  Instance: /axi_top_1m3s_tb
+# Break in Module axi_top_1m3s_tb at C:/Users/LENOVO/Desktop/Digital_Electronics/AXI_Protocol/testbench/axi_top_1m3s_tb.sv line 469
+quit -sim
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/LENOVO/Desktop/Digital_Electronics/AXI_Protocol/AXI_Protocol.mpf).  File can not be renamed.
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/LENOVO/Desktop/Digital_Electronics/AXI_Protocol/AXI_Protocol.mpf).  File can not be renamed.
+# End time: 10:26:21 on Aug 25,2026, Elapsed time: 0:00:36
+# Errors: 2, Warnings: 1
+do run.do
+# vsim -voptargs="+acc" work.axi_top_tb 
+# Start time: 10:26:54 on Aug 25,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "axi_master_aw_ch(fast)".
+# ** Warning: rtl/axi_master_top.sv(190): (vopt-2685) [TFMPC] - Too few port connections for 'u_b_ch'.  Expected 13, found 11.
+# ** Warning: rtl/axi_master_top.sv(190): (vopt-2718) [TFMPC] - Missing connection for port 'bid_mismatch'.
+# ** Warning: rtl/axi_master_top.sv(190): (vopt-2718) [TFMPC] - Missing connection for port 'bresp_out'.
+# ** Note: (vopt-143) Recognized 1 FSM in module "axi_master_ar_ch(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "axi_master_w_ch(fast)".
+# ** Warning: rtl/axi_slave_top.sv(87): (vopt-2685) [TFMPC] - Too few port connections for 'u_aw_ch'.  Expected 17, found 16.
+# ** Warning: rtl/axi_slave_top.sv(87): (vopt-2718) [TFMPC] - Missing connection for port 'awburst_out'.
+# ** Warning: rtl/axi_slave_top.sv(122): (vopt-2685) [TFMPC] - Too few port connections for 'u_w_ch'.  Expected 17, found 16.
+# ** Warning: rtl/axi_slave_top.sv(122): (vopt-2718) [TFMPC] - Missing connection for port 'awlength'.
+# ** Warning: rtl/axi_slave_top.sv(157): (vopt-2685) [TFMPC] - Too few port connections for 'u_ar_ch'.  Expected 16, found 15.
+# ** Warning: rtl/axi_slave_top.sv(157): (vopt-2718) [TFMPC] - Missing connection for port 'arburst_out'.
+# ** Note: (vopt-143) Recognized 1 FSM in module "axi_slave_r_ch_ram(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "axi_master_r_ch(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=9.
+# Loading sv_std.std
+# Loading work.axi_top_tb(fast)
+# Loading work.axi_top(fast)
+# Loading work.axi_master_top(fast)
+# Loading work.axi_master_aw_ch(fast)
+# Loading work.axi_fifo(fast)
+# Loading work.axi_burst_addr_gen(fast)
+# Loading work.axi_wstrb_gen(fast)
+# Loading work.axi_master_w_ch(fast)
+# Loading work.axi_master_b_ch(fast)
+# Loading work.axi_master_ar_ch(fast)
+# Loading work.axi_master_r_ch(fast)
+# Loading work.axi_slave_top(fast)
+# Loading work.axi_slave_aw_ch(fast)
+# Loading work.axi_slave_w_ch(fast)
+# Loading work.axi_slave_b_ch(fast)
+# Loading work.axi_slave_ar_ch(fast)
+# Loading work.axi_slave_r_ch_ram(fast)
+# Loading work.axi_slave_ram(fast)

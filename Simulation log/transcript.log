@@ -1,0 +1,378 @@
+# ** UI-Msg: (vish-4014) No objects found matching '/axi_top_tb/dut/u_master/u_ar_ch/arlength_out'.
+# Executing ONERROR command at macro ./wave.do line 231
+# ** UI-Msg: (vish-4014) No objects found matching '/axi_top_tb/dut/u_master/u_ar_ch/arburst_out'.
+# Executing ONERROR command at macro ./wave.do line 232
+# ** UI-Msg: (vish-4014) No objects found matching '/axi_top_tb/dut/u_master/u_ar_ch/arsize_out'.
+# Executing ONERROR command at macro ./wave.do line 233
+# ** UI-Msg: (vish-4014) No objects found matching '/axi_top_tb/dut/u_master/u_ar_ch/arid_out'.
+# Executing ONERROR command at macro ./wave.do line 234
+run -all
+# 
+# === TEST 1: e/read at addr 0 ===
+# addr=00000000 len=3 burst=1 size=10 id=1
+# [195000] Write transaction complete, resp = OKAY
+# [335000] beat 0 OK - data = a0a00000
+# [355000] beat 1 OK - data = a0a00001
+# [375000] beat 2 OK - data = a0a00002
+# [395000] beat 3 OK - data = a0a00003
+# --- TEST 1 PASSED ---
+# 
+# === TEST 2: ead at addr 0x40 ===
+# addr=00000040 len=0 burst=1 size=10 id=2
+# [475000] Write transaction complete, resp = OKAY
+# [585000] beat 0 OK - data = dead0000
+# --- TEST 2 PASSED ---
+# 
+# === TEST 3: ad at addr 0x100 ===
+# addr=00000100 len=7 burst=1 size=10 id=3
+# [805000] Write transaction complete, resp = OKAY
+# [985000] beat 0 OK - data = cafe0000
+# [1005000] beat 1 OK - data = cafe0001
+# [1025000] beat 2 OK - data = cafe0002
+# [1045000] beat 3 OK - data = cafe0003
+# [1065000] beat 4 OK - data = cafe0004
+# [1085000] beat 5 OK - data = cafe0005
+# [1105000] beat 6 OK - data = cafe0006
+# [1125000] beat 7 OK - data = cafe0007
+# --- TEST 3 PASSED ---
+# 
+# === TEST 4: ad at addr 0x200 ===
+# addr=00000200 len=3 burst=10 size=10 id=4
+# [1265000] Write transaction complete, resp = OKAY
+# [1405000] beat 0 OK - data = beef0000
+# [1425000] beat 1 OK - data = beef0001
+# [1445000] beat 2 OK - data = beef0002
+# [1465000] beat 3 OK - data = beef0003
+# --- TEST 4 PASSED ---
+# 
+# === TEST 5: -boundary start) ===
+# addr=00000318 len=7 burst=10 size=10 id=5
+# [1685000] Write transaction complete, resp = OKAY
+# [1865000] beat 0 OK - data = face0000
+# [1885000] beat 1 OK - data = face0001
+# [1905000] beat 2 OK - data = face0002
+# [1925000] beat 3 OK - data = face0003
+# [1945000] beat 4 OK - data = face0004
+# [1965000] beat 5 OK - data = face0005
+# [1985000] beat 6 OK - data = face0006
+# [2005000] beat 7 OK - data = face0007
+# --- TEST 5 PASSED ---
+# 
+# === TEST 6: ad at addr 0x500 ===
+# addr=00000500 len=1 burst=10 size=10 id=6
+# [2105000] Write transaction complete, resp = OKAY
+# [2225000] beat 0 OK - data = 22220000
+# [2245000] beat 1 OK - data = 22220001
+# --- TEST 6 PASSED ---
+# 
+# === TEST 7: er address bound ===
+# addr=0000ffe0 len=3 burst=1 size=10 id=7
+# [2385000] Write transaction complete, resp = OKAY
+# [2525000] beat 0 OK - data = 44440000
+# [2545000] beat 1 OK - data = 44440001
+# [2565000] beat 2 OK - data = 44440002
+# [2585000] beat 3 OK - data = 44440003
+# --- TEST 7 PASSED ---
+# 
+# === TEST 8: ad at addr 0x700 ===
+# addr=00000700 len=0 burst=10 size=10 id=8
+# [2665000] Write transaction complete, resp = OKAY
+# [2775000] beat 0 OK - data = 55550000
+# --- TEST 8 PASSED ---
+# 
+# === TEST 9: ad at addr 0xA00 ===
+# addr=00000a00 len=3 burst=1 size=1 id=9
+# [2915000] Write transaction complete, resp = OKAY
+# [3055000] beat 0 OK - data = 88880000
+# [3075000] beat 1 OK - data = 88880000
+# [3095000] beat 2 OK - data = 88880000
+# [3115000] beat 3 OK - data = 88880000
+# --- TEST 9 PASSED ---
+# 
+# === TEST 10: ad at addr 0xB00 ===
+# addr=00000b00 len=3 burst=1 size=0 id=10
+# [3255000] Write transaction complete, resp = OKAY
+# [3395000] beat 0 OK - data = 99990000
+# [3415000] beat 1 OK - data = 99990000
+# [3435000] beat 2 OK - data = 99990000
+# [3455000] beat 3 OK - data = 99990000
+# --- TEST 10 PASSED ---
+# 
+# === TEST 11: ad at addr 0xB00 ===
+# addr=00000bb0 len=3 burst=1 size=0 id=11
+# [3595000] Write transaction complete, resp = OKAY
+# [3735000] beat 0 OK - data = ffff01aa
+# [3755000] beat 1 OK - data = ffff01aa
+# [3775000] beat 2 OK - data = ffff01aa
+# [3795000] beat 3 OK - data = ffff01aa
+# --- TEST 11 PASSED ---
+# 
+# === TEST 12: d at addr 0x1400 ===
+# addr=00001400 len=15 burst=1 size=10 id=12
+# [4175000] Write transaction complete, resp = OKAY
+# [4435000] beat 0 OK - data = 67890000
+# [4455000] beat 1 OK - data = 67890001
+# [4475000] beat 2 OK - data = 67890002
+# [4495000] beat 3 OK - data = 67890003
+# [4515000] beat 4 OK - data = 67890004
+# [4535000] beat 5 OK - data = 67890005
+# [4555000] beat 6 OK - data = 67890006
+# [4575000] beat 7 OK - data = 67890007
+# [4595000] beat 8 OK - data = 67890008
+# [4615000] beat 9 OK - data = 67890009
+# [4635000] beat 10 OK - data = 6789000a
+# [4655000] beat 11 OK - data = 6789000b
+# [4675000] beat 12 OK - data = 6789000c
+# [4695000] beat 13 OK - data = 6789000d
+# [4715000] beat 14 OK - data = 6789000e
+# [4735000] beat 15 OK - data = 6789000f
+# --- TEST 12 PASSED ---
+# 
+# === TEST 13: 1 at addr 0x1500 ===
+# addr=00001500 len=3 burst=1 size=10 id=1
+# [4875000] Write transaction complete, resp = OKAY
+# [5015000] beat 0 OK - data = 10100000
+# [5035000] beat 1 OK - data = 10100001
+# [5055000] beat 2 OK - data = 10100002
+# [5075000] beat 3 OK - data = 10100003
+# --- TEST 13 PASSED ---
+# 
+# === TEST 14: 2 at addr 0x1540 ===
+# addr=00001540 len=3 burst=1 size=10 id=2
+# [5215000] Write transaction complete, resp = OKAY
+# [5355000] beat 0 OK - data = 20200000
+# [5375000] beat 1 OK - data = 20200001
+# [5395000] beat 2 OK - data = 20200002
+# [5415000] beat 3 OK - data = 20200003
+# --- TEST 14 PASSED ---
+# 
+# === TEST 15: 3 at addr 0x1580 ===
+# addr=00001580 len=3 burst=1 size=10 id=3
+# [5555000] Write transaction complete, resp = OKAY
+# [5695000] beat 0 OK - data = 30300000
+# [5715000] beat 1 OK - data = 30300001
+# [5735000] beat 2 OK - data = 30300002
+# [5755000] beat 3 OK - data = 30300003
+# --- TEST 15 PASSED ---
+# 
+# === TEST 16: 1 at addr 0x1600 ===
+# addr=00001600 len=3 burst=1 size=10 id=4
+# [5895000] Write transaction complete, resp = OKAY
+# [6035000] beat 0 OK - data = 40400000
+# [6055000] beat 1 OK - data = 40400001
+# [6075000] beat 2 OK - data = 40400002
+# [6095000] beat 3 OK - data = 40400003
+# --- TEST 16 PASSED ---
+# 
+# === TEST 17: 2 at addr 0x1640 ===
+# addr=00001640 len=3 burst=1 size=10 id=5
+# [6235000] Write transaction complete, resp = OKAY
+# [6375000] beat 0 OK - data = 50500000
+# [6395000] beat 1 OK - data = 50500001
+# [6415000] beat 2 OK - data = 50500002
+# [6435000] beat 3 OK - data = 50500003
+# --- TEST 17 PASSED ---
+# 
+# === TEST 18: 3 at addr 0x1680 ===
+# addr=00001680 len=3 burst=1 size=10 id=6
+# [6575000] Write transaction complete, resp = OKAY
+# [6715000] beat 0 OK - data = 60600000
+# [6735000] beat 1 OK - data = 60600001
+# [6755000] beat 2 OK - data = 60600002
+# [6775000] beat 3 OK - data = 60600003
+# --- TEST 18 PASSED ---
+# 
+# === TEST 19: e at addr 0x1800 ===
+# addr=00001800 len=0 burst=1 size=10 id=7
+# [6855000] Write transaction complete, resp = OKAY
+# [6965000] beat 0 OK - data = a1a10000
+# --- TEST 19 PASSED ---
+# 
+# === TEST 20: e at addr 0x1804 ===
+# addr=00001804 len=0 burst=1 size=10 id=8
+# [7045000] Write transaction complete, resp = OKAY
+# [7155000] beat 0 OK - data = a2a20000
+# --- TEST 20 PASSED ---
+# 
+# === TEST 21: e at addr 0x1808 ===
+# addr=00001808 len=0 burst=1 size=10 id=9
+# [7235000] Write transaction complete, resp = OKAY
+# [7345000] beat 0 OK - data = a3a30000
+# --- TEST 21 PASSED ---
+# 
+# === TEST 22: d at addr 0x1900 ===
+# addr=00001900 len=3 burst=10 size=10 id=10
+# [7485000] Write transaction complete, resp = OKAY
+# [7625000] beat 0 OK - data = b1b10000
+# [7645000] beat 1 OK - data = b1b10001
+# [7665000] beat 2 OK - data = b1b10002
+# [7685000] beat 3 OK - data = b1b10003
+# --- TEST 22 PASSED ---
+# 
+# === TEST 23: d at addr 0x1A00 ===
+# addr=00001a00 len=7 burst=10 size=10 id=11
+# [7905000] Write transaction complete, resp = OKAY
+# [8085000] beat 0 OK - data = b2b20000
+# [8105000] beat 1 OK - data = b2b20001
+# [8125000] beat 2 OK - data = b2b20002
+# [8145000] beat 3 OK - data = b2b20003
+# [8165000] beat 4 OK - data = b2b20004
+# [8185000] beat 5 OK - data = b2b20005
+# [8205000] beat 6 OK - data = b2b20006
+# [8225000] beat 7 OK - data = b2b20007
+# --- TEST 23 PASSED ---
+# 
+# === TEST 24: B0C (wrap early) ===
+# addr=00001b0c len=3 burst=10 size=10 id=12
+# [8365000] Write transaction complete, resp = OKAY
+# [8505000] beat 0 OK - data = b3b30000
+# [8525000] beat 1 OK - data = b3b30001
+# [8545000] beat 2 OK - data = b3b30002
+# [8565000] beat 3 OK - data = b3b30003
+# --- TEST 24 PASSED ---
+# 
+# === TEST 25: ap after 1 beat) ===
+# addr=00001c1c len=7 burst=10 size=10 id=13
+# [8785000] Write transaction complete, resp = OKAY
+# [8965000] beat 0 OK - data = b4b40000
+# [8985000] beat 1 OK - data = b4b40001
+# [9005000] beat 2 OK - data = b4b40002
+# [9025000] beat 3 OK - data = b4b40003
+# [9045000] beat 4 OK - data = b4b40004
+# [9065000] beat 5 OK - data = b4b40005
+# [9085000] beat 6 OK - data = b4b40006
+# [9105000] beat 7 OK - data = b4b40007
+# --- TEST 25 PASSED ---
+# 
+# === TEST 26: -boundary start) ===
+# addr=00001d20 len=15 burst=10 size=10 id=14
+# [9485000] Write transaction complete, resp = OKAY
+# [9745000] beat 0 OK - data = b5b50000
+# [9765000] beat 1 OK - data = b5b50001
+# [9785000] beat 2 OK - data = b5b50002
+# [9805000] beat 3 OK - data = b5b50003
+# [9825000] beat 4 OK - data = b5b50004
+# [9845000] beat 5 OK - data = b5b50005
+# [9865000] beat 6 OK - data = b5b50006
+# [9885000] beat 7 OK - data = b5b50007
+# [9905000] beat 8 OK - data = b5b50008
+# [9925000] beat 9 OK - data = b5b50009
+# [9945000] beat 10 OK - data = b5b5000a
+# [9965000] beat 11 OK - data = b5b5000b
+# [9985000] beat 12 OK - data = b5b5000c
+# [10005000] beat 13 OK - data = b5b5000d
+# [10025000] beat 14 OK - data = b5b5000e
+# [10045000] beat 15 OK - data = b5b5000f
+# --- TEST 26 PASSED ---
+# 
+# === TEST 27: 2 at addr 0x1E00 ===
+# addr=00001e00 len=3 burst=10 size=10 id=15
+# [10185000] Write transaction complete, resp = OKAY
+# [10325000] beat 0 OK - data = b6b60000
+# [10345000] beat 1 OK - data = b6b60001
+# [10365000] beat 2 OK - data = b6b60002
+# [10385000] beat 3 OK - data = b6b60003
+# --- TEST 27 PASSED ---
+# 
+# === TEST 28: 2 at addr 0x1E40 ===
+# addr=00001e40 len=3 burst=10 size=10 id=0
+# [10525000] Write transaction complete, resp = OKAY
+# [10665000] beat 0 OK - data = b7b70000
+# [10685000] beat 1 OK - data = b7b70001
+# [10705000] beat 2 OK - data = b7b70002
+# [10725000] beat 3 OK - data = b7b70003
+# --- TEST 28 PASSED ---
+# 
+# === TEST 29: urrent read test ===
+# addr=00002000 len=3 burst=1 size=10 id=1
+# [10865000] Write transaction complete, resp = OKAY
+# [11005000] beat 0 OK - data = 77770000
+# [11025000] beat 1 OK - data = 77770001
+# [11045000] beat 2 OK - data = 77770002
+# [11065000] beat 3 OK - data = 77770003
+# --- TEST 29 PASSED ---
+# 
+# === TEST 30 (CONCURRENT): 0 / read @0x2000 ===
+#   WRITE: addr=00002100 len=3 id=13
+#   READ : addr=00002000 len=3 id=1
+# [11205000] Write transaction complete, resp = OKAY
+# [11205000] beat 0 OK - data = 77770000
+# [11225000] beat 1 OK - data = 77770001
+# [11245000] beat 2 OK - data = 77770002
+# [11265000] beat 3 OK - data = 77770003
+# --- TEST 30 PASSED (concurrent) ---
+# 
+# === TEST 31 (CONCURRENT): 0 / read @0x2100 ===
+#   WRITE: addr=00002200 len=7 id=14
+#   READ : addr=00002100 len=3 id=13
+# [11405000] beat 0 OK - data = c0c00000
+# [11425000] beat 1 OK - data = c0c00001
+# [11445000] beat 2 OK - data = c0c00002
+# [11465000] beat 3 OK - data = c0c00003
+# [11485000] Write transaction complete, resp = OKAY
+# --- TEST 31 PASSED (concurrent) ---
+# 
+# === TEST 32: ad at addr 0xC00 ===
+# addr=00000c00 len=3 burst=1 size=0 id=11
+# [11625000] Write transaction complete, resp = OKAY
+# [11765000] beat 0 OK - data = aabb0000
+# [11785000] beat 1 OK - data = aabb0000
+# [11805000] beat 2 OK - data = aabb0000
+# [11825000] beat 3 OK - data = aabb0000
+# --- TEST 32 PASSED ---
+# 
+# === TEST 33: ad at addr 0xC40 ===
+# addr=00000c40 len=3 burst=1 size=0 id=12
+# [11965000] Write transaction complete, resp = OKAY
+# [12105000] beat 0 OK - data = ccdd0000
+# [12125000] beat 1 OK - data = ccdd0000
+# [12145000] beat 2 OK - data = ccdd0000
+# [12165000] beat 3 OK - data = ccdd0000
+# --- TEST 33 PASSED ---
+# 
+# === TEST 34: ad at addr 0xD00 ===
+# addr=00000d00 len=3 burst=1 size=1 id=13
+# [12305000] Write transaction complete, resp = OKAY
+# [12445000] beat 0 OK - data = eeff0000
+# [12465000] beat 1 OK - data = eeff0000
+# [12485000] beat 2 OK - data = eeff0000
+# [12505000] beat 3 OK - data = eeff0000
+# --- TEST 34 PASSED ---
+# 
+# === TEST 35: ad at addr 0xD40 ===
+# addr=00000d40 len=3 burst=1 size=1 id=14
+# [12645000] Write transaction complete, resp = OKAY
+# [12785000] beat 0 OK - data = 11220000
+# [12805000] beat 1 OK - data = 11220000
+# [12825000] beat 2 OK - data = 11220000
+# [12845000] beat 3 OK - data = 11220000
+# --- TEST 35 PASSED ---
+# 
+# === TEST 36: ad at addr 0xE00 ===
+# addr=00000e00 len=7 burst=1 size=0 id=15
+# [13065000] Write transaction complete, resp = OKAY
+# [13245000] beat 0 OK - data = 33440000
+# [13265000] beat 1 OK - data = 33440000
+# [13285000] beat 2 OK - data = 33440000
+# [13305000] beat 3 OK - data = 33440000
+# [13325000] beat 4 OK - data = 33440000
+# [13345000] beat 5 OK - data = 33440000
+# [13365000] beat 6 OK - data = 33440000
+# [13385000] beat 7 OK - data = 33440000
+# --- TEST 36 PASSED ---
+# 
+# =====================================
+# === ALL 36 TESTS PASSED ===
+# =====================================
+# ** Note: $stop    : C:/Users/LENOVO/Desktop/Digital_Electronics/AXI_Protocol/testbench/axi_tob_tb.sv(496)
+#    Time: 13485 ns  Iteration: 1  Instance: /axi_top_tb
+# Break in Module axi_top_tb at C:/Users/LENOVO/Desktop/Digital_Electronics/AXI_Protocol/testbench/axi_tob_tb.sv line 496
+exit
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/LENOVO/Desktop/Digital_Electronics/AXI_Protocol/AXI_Protocol.mpf).  File can not be renamed.
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/LENOVO/Desktop/Digital_Electronics/AXI_Protocol/AXI_Protocol.mpf).  File can not be renamed.
+# End time: 10:27:51 on Aug 25,2026, Elapsed time: 0:00:57
+# Errors: 2, Warnings: 10
