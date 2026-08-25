@@ -3,7 +3,8 @@
 A SystemVerilog implementation of an AXI4 master, AXI4 slave, and a multi-slave
 AXI interconnect, verified with self-checking testbenches in QuestaSim.
 
-<img width="873" height="710" alt="image" src="https://github.com/user-attachments/assets/234bc874-cd94-4a48-a7f8-e6b2b181925a" />
+<img width="873" height="710" alt="image" src="https://github.com/user-attachments/assets/d068401c-ca03-4828-a202-a10bfee798df" />
+
 
 The diagram above shows the full signal-level view of the design: an AXI
 master driving all five AXI channels (AW, W, B, AR, R) through the
